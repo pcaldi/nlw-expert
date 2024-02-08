@@ -43,3 +43,10 @@ npm i react-native-keyboard-aware-scroll-view --save
 ```
 npx expo install @react-native-async-storage/async-storage
 ```
+# 🎥 Demo
+---
+<p align="center">
+  <img height="600" src="./src/assets/demo.gif"/>
+</p>
+
+---
