@@ -1,4 +1,13 @@
 
+
+  # 🚀 Projeto desenvolvido no evento NLW expert
+
+<p align="center">
+    <img src="./src/assets/cover.png" alt="Image Login Screen" height="400">
+</p>
+
+
+
 # 🎥 Demo
 ---
 <p align="center">
