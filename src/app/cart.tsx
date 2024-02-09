@@ -22,9 +22,9 @@ export default function Cart() {
 
   const navigation = useNavigation()
 
-  const total = FormatCurrency(cartStore.products.reduce((total, product) => total + product.price * product.quantity, 0))
-
   const PHONE_NUMBER = "5541999212674"
+
+  const total = FormatCurrency(cartStore.products.reduce((total, product) => total + product.price * product.quantity, 0))
 
   function handleProductRemove(product: ProductCartProps) {
     //cartStore.remove(product)
