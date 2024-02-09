@@ -56,9 +56,9 @@ export default function Cart() {
   }
 
   return (
-    <View className="flex-1 pt-8">
-      <Header title="Seu carinho" />
-      <KeyboardAwareScrollView>
+    <KeyboardAwareScrollView>
+      <View className="flex-1 pt-8">
+        <Header title="Seu carinho" />
         <ScrollView showsVerticalScrollIndicator={false}>
           <View className="p-5 flex-1">
             {cartStore.products.length > 0 ? (
@@ -89,18 +89,18 @@ export default function Cart() {
 
           </View>
         </ScrollView>
-      </KeyboardAwareScrollView>
 
-      <View className="p-5 gap-5">
-        <Button onPress={handleOrder}>
-          <Button.Text>Enviar pedido</Button.Text>
-          <Button.Icon>
-            <Feather name="arrow-right-circle" size={20} />
-          </Button.Icon>
-        </Button>
-        <LinkButton title="Voltar ao menu" href="/" />
-      </View>
-    </View>
+        <View className="p-5 gap-5">
+          <Button onPress={handleOrder}>
+            <Button.Text>Enviar pedido</Button.Text>
+            <Button.Icon>
+              <Feather name="arrow-right-circle" size={20} />
+            </Button.Icon>
+          </Button>
+          <LinkButton title="Voltar ao menu" href="/" />
+        </View>
+      </View >
+    </KeyboardAwareScrollView>
   );
 }
 
