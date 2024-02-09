@@ -5,6 +5,8 @@ import { ProductCartProps, useCartStore } from "@/stores/cart-stores";
 import { FormatCurrency } from "@/utils/functions/formatCurrency";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
+import { PHONE_NUMBER } from '@env'
+
 import { Header } from "@/components/header";
 import { Product } from "@/components/product";
 import { Input } from "@/components/input";
@@ -17,12 +19,9 @@ import { useNavigation } from "expo-router";
 export default function Cart() {
   const [address, setAddress] = useState('')
 
-
   const cartStore = useCartStore()
 
   const navigation = useNavigation()
-
-  const PHONE_NUMBER = "5541999212674"
 
   const total = FormatCurrency(cartStore.products.reduce((total, product) => total + product.price * product.quantity, 0))
 
