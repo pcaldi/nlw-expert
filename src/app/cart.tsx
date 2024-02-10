@@ -1,9 +1,12 @@
+import { useState } from "react";
+import { useNavigation } from "expo-router";
 import { View, Text, ScrollView, Alert, Linking } from "react-native";
+
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 import { ProductCartProps, useCartStore } from "@/stores/cart-stores";
 
 import { FormatCurrency } from "@/utils/functions/formatCurrency";
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 import { Header } from "@/components/header";
 import { Product } from "@/components/product";
@@ -11,8 +14,6 @@ import { Input } from "@/components/input";
 import { Button } from "@/components/button";
 import { Feather } from "@expo/vector-icons";
 import { LinkButton } from "@/components/link-button";
-import { useState } from "react";
-import { useNavigation } from "expo-router";
 
 export default function Cart() {
   const [address, setAddress] = useState('')
