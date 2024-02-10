@@ -5,8 +5,6 @@ import { ProductCartProps, useCartStore } from "@/stores/cart-stores";
 import { FormatCurrency } from "@/utils/functions/formatCurrency";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
-import { PHONE_NUMBER } from '@env'
-
 import { Header } from "@/components/header";
 import { Product } from "@/components/product";
 import { Input } from "@/components/input";
@@ -18,6 +16,8 @@ import { useNavigation } from "expo-router";
 
 export default function Cart() {
   const [address, setAddress] = useState('')
+
+  const PHONE_NUMBER = process.env.EXPO_PUBLIC_PHONE_NUMBER
 
   const cartStore = useCartStore()
 
